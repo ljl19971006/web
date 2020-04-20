@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">home</a></li>
+                <li><a href="./menu.html">menu</a></li>
+                <!-- <li class="logo"><a href="./index.html>">logo</a></li> -->
+                <!-- <li><a href="./location.html">location</a></li> -->
+                <li><a href="./contact.html">contact</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome!</h1>
+    </header>
+    <div id="slider">
+        <ul class="slides">
+            <li class="slide"><img src="./picture/bread.jpg"/> </li>
+            <li class="slide"><img src="./picture/cake.jpg"/> </li>
+            <li class="slide"><img src="./picture/bg.jpg"/> </li>
+            <li class="slide"><img src="./picture/cafe.jpg"/> </li>
+            <li class="slide"><img src="./picture/bread.jpg"/> </li>
+        </ul>
+        
+        
+    </div>
+    <section><p class="text">Nos professionnels:</p></section>
+    <section class="features">
+        
+        <figure>
+            <img src="./picture/CHLOE.jpg">
+            <figcaption>ALEX</figcaption>
+        </figure>
+        <figure>
+            <img src="./picture/LI.png">
+            <figcaption>LI</figcaption>
+        </figure>
+        <figure>
+            <img src="./picture/EVA.jpg">
+            <figcaption>EVA</figcaption>
+        </figure>
+    </section>
+    <footer>33 rue mieg Belfort  0766535772 ljl19971006@gmail.com <a href="https://www.facebook.com/sharer.php?title=填上你的标题&u=http://example.com" target="_blank"  > <img class="logo" src="./picture/fb.png" style="border:none 0;" alt="" /></a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script>
+        $(function(){
+            
+                //configuration
+                var width=375;
+                var animationspeed=1500;
+                var pause=1000;
+                var currentSlide=1;
+                var initial=0;
+                //cache Dom
+                var $slider =$('#slider');
+                var $sliderContainer =$slider.find('.slides');
+                var $slides =$sliderContainer.find('.slide');
+                
+                var interval;
+            function startSlider(){
+              interval= setInterval(function(){
+                 $sliderContainer.animate({'margin-left':'-='+width},animationspeed,function(){
+                    currentSlide++;
+                    if(currentSlide === $slides.length){
+                        currentSlide=1;
+                        // alert('es');
+                        $sliderContainer.css('margin-left',0);
+                        currentSlide++;
+                    }
+                 });
+            },pause);
+            }
+                //清除计时器，停止移动
+            function stopSlider(){
+                    clearInterval(interval);
+            }
+            //监听  鼠标移入和移出
+            $slider.on('mouseenter',stopSlider).on('mouseleave',startSlider);
+           
+            startSlider();
+        });
+    
+    </script>
+</body>
+</html>

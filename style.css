@@ -1,0 +1,160 @@
+header{
+background: black;
+color: white;
+margin:auto;
+padding: 20px;
+text-align: auto;
+background-image: url("./picture/navbg.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
+}
+header a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+header .logo a{
+/* background-image: url("./jackson.png"); */
+/* background-color: aquamarine; */
+background-size: 300px;
+background-repeat: no-repeat;
+display: inline-block;
+height: 150px;
+text-indent: -9999px;
+position: relative;
+width: 300px;
+top: -70px;
+
+}
+
+#slider{
+
+    position: relative;
+    background: #000;
+    width: 700px;
+    height: 250px;
+    overflow: hidden;
+    margin-left: 0px;
+    /* text-align: center; */
+    margin: auto;
+    
+}
+/* 总的照片拼起来长度 */
+#slider .slides{
+    background-color: aquamarine;
+    position: absolute;
+    display: block;
+    width: 1875px;
+    height: 250px;
+    margin: auto;
+    padding: 0;
+    /* text-align: center; */
+}
+/* 单张照片尺寸 */
+#slider .slide{
+    background-color:pink;
+    float: left;
+    width: 375px;
+    height: 250px;
+    margin: 0;
+    padding: 0%; 
+    list-style-type: none;
+      /* text-align: center; */
+}
+#slider .text{
+    display: inline-block;
+
+
+}
+.features{
+background: white;
+color: grey;
+padding: 20px;
+display: flex;
+flex-direction: row;
+text-align: center;
+}
+
+.features figure{
+    margin:auto;
+    width: auto;
+    text-transform: uppercase;
+  
+}
+.features figure img{
+    border: 1px solid white;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: gray 0 0 10px;
+}
+.features2{
+    background: white;
+    color: rgb(167, 167, 167);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    }
+    
+    .features2 figure{
+        margin:auto;
+        width: auto;
+        text-transform: uppercase;
+      
+    }
+    .features2 figure img{
+        border: 1px solid white;
+        width: 200px;
+        height: 175px;
+        
+        box-shadow: gray 0 0 10px;
+    }
+.text{
+    margin: auto;
+    margin-top: 20px;
+        font-family:Arial,Helvetica,sans-serif;
+        color: rgb(37, 44, 46);
+        font-weight: 700;
+        font-size: larger;
+        min-width:920px;
+        
+}
+
+div{
+    position: relative;
+    display: flex;
+    margin: auto;
+    width: 100px;
+}
+
+ul{
+     margin: 0;
+     padding: 0%;
+     list-style-type: none;
+}
+li{
+    display: inline-block;
+    margin: 20px;
+
+}
+footer{
+    background: black;
+    color:gray;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    font-size: 12px;
+    padding: 20px 20px;
+    text-align: center;
+    background-image: url("./picture/navbg.jpg");
+}
+.logo{
+
+    bottom:0px;
+    height: 20px;
+    width: 20px;
+	right:1px;
+	color:#fff; 
+	cursor: pointer;
+}
